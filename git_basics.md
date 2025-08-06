@@ -74,34 +74,7 @@
     - tímto příkazem změny posílám na vzdálený repozitář na GitLab / GitHub, apod.
     - budu vyzván k zadání hesla
 
+## Seznam příkazů
+viz [git_basic_commands.md](git_basic_commands.md)
 
-# Základní příkazy - shrnutí
-
-Všechny příkazy začínají klíčovým slovem **git**.
-
-|cmd příkaz|popis|
-|-|-|
-|git status|zobrazí status repozitáře|
-|git add + filename.extension | Přidá <filename.extension> do staging area (u souboru chci sledovat změny)|
-|git add .|přidá celý obsah repozitáře do staging are (kromě obsahu souboru .gitignore)|
-|git commit -m "message" | vytvoří commit + název commitu|
-|git clone + https link |Klonuji GitLab repozitář do lokálu|
-|git push| pushuji lokální repozitář do GitLabu|
-|git pull|stahuji up-to-date verzi repozitáře z GitLabu|
-
-### Další příkazy:
-
-|cmd příkaz|popis|
-|-|-|
-|git log --oneline|zobrazí lokální historii commitů|
-|git branch||
-|git checkout||
-|git diff||
-|git config (--global) user.name ("...")| omit global for local setting, omit "..." for just check|
-|git config (--global) user.email ("...")| omit global for local setting, omit "..." for just check|
-|git remote -v| display remote repos|
-|git remote set-url origin https://github.com/yourusername/yourrepo.git | change remote repo|
-|git reset | reset the "git add" command|
-|git reset --hard|reset to the last commit (discard current changes)|
-|git reset --hard <commit_hash>|reset to the specified commit (all subsequent commits will be discarded)|
 
