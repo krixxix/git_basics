@@ -48,6 +48,7 @@ Všechny příkazy začínají klíčovým slovem **git**.
 ## Repos etc.
 |cmd příkaz|popis|
 |-|-|
-|``git remote -v``| display remote repos|
-|``git remote set-url origin https://github.com/yourusername/yourrepo.git`` | change remote repo|
+|``git remote -v``| list remote repos|
+|``git remote set-url origin <link>`` | change remote repo|
+|``git remote add <name> <link>``|add new repo as a new remote|
 |...|...|
