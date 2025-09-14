@@ -45,6 +45,11 @@ Všechny příkazy začínají klíčovým slovem **git**.
 |``git checkout``||
 |...|...|
 
+## Pull requests
+|cmd příkaz|popis|
+|-|-|
+|``git fetch origin pull/ID/head:pr-branch``|e.g. pr-1 for the first pr|
+
 ## Repos etc.
 |cmd příkaz|popis|
 |-|-|
