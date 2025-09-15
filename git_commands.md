@@ -4,21 +4,26 @@ Všechny příkazy začínají klíčovým slovem **git**.
 ## Obecné 
 |cmd příkaz|popis|
 |-|-|
-|``git status``|zobrazí status repozitáře|
-|``git add + filename.extension`` | Přidá <filename.extension> do staging area (u souboru chci sledovat změny)|
-|``git add .``|přidá celý obsah repozitáře do staging are (kromě obsahu souboru .gitignore)|
-|``git commit -m "message"`` | vytvoří commit + název commitu|
-|``git commit`` |taky lze, ale otevře VIM v CMD: (ESC, ``:wq`` = save & quit)|
-|``git clone + https link`` |Klonuji GitLab repozitář do lokálu|
-|``git push``| pushuji lokální repozitář do GitLabu|
-|``git pull``|stahuji up-to-date verzi repozitáře z GitLabu|
-|``git log --oneline``|zobrazí lokální historii commitů|
-|``git diff``|...|
+|``git status``|display the current local repo status|
+|``git add <filename.extension>`` | add <filename.extension> into the staging area (track changes)|
+|``git add .``|add everything into the staging area (except of .gitignore)|
+|``git commit -m <message>`` | create commit + commit message|
+|``git commit`` | also possible, opens VIM: (``ESC``, ``:wq`` = save & quit)|
+|``git clone <https link>`` |clone remote repo via HTTPS|
+|``git push``| push the <b>current</b> branch into remote repo|
+|``git push <origin> <main>``|push the <b>main</b> branch into the <b>origin</b> remote|
+|``git fetch``|download the latest changes from <b>all remote branches</b> without merging them|
+|``git fetch <origin> <main>``|download content of <b>main</b> branch from <b>origin</b> remote |
+|``git pull``| download and merge all changes of the <b>current</b> branch and merge them|
+|``git pull origin main``|downlaod and merge changes from <b>origin</b> remote of <b>main</b> branch|
+|``git log``|display commit hisotry|
+|``git log --oneline``|display <b>simplified</b> commit history|
+|``git diff``|shows changes in your working directory that are not staged|
+|``git diff --staged``|shows changes between the staged files and the last commit|
+|``git diff <commit1> <commit2>``|shows differences between two commits|
 |...|...|
 
-## Další příkazy:
-
-### Commit reset
+## Commit reset
 |cmd příkaz|popis|
 |-|-|
 |``git reset`` | reset the "git add" command|
@@ -27,22 +32,26 @@ Všechny příkazy začínají klíčovým slovem **git**.
 |...|...|
 
 
-### User settings
+## User settings
 |cmd příkaz|popis|
 |-|-|
+|``git config --list``|check local user settings|
 |``git config --global user.name "user_name"``| set global user name|
 |``git config --global user.email "user_email"``| set global user email|
 |``git config --global --list``|check global settings|
 |``git config user.name "user_name"``|set local user name -> **!nutno stát ve vybraném repo!**|
 |``git config user.email "user_email"``|set local user email -> **!nutno stát ve vybraném repo!**|
-|``git config --list``|check local user settings|
 |...|...|
 
 ## Branches
 |cmd příkaz|popis|
 |-|-|
-|``git branch``||
-|``git checkout``||
+|``git branch``| list branches|
+|``git branch -a``| list all branches (including remote)|
+|``git branch <branch-name>``|create branch|
+|``git checkout <branch-name>``|(<b>obsolete</b>) switch to another branch|
+|``git switch <branch-name>``|switch to another branch|
+|``git checkout -b <branch-name>``|create and switch to a new branch (shortcut)|
 |...|...|
 
 ## Pull requests
@@ -50,7 +59,7 @@ Všechny příkazy začínají klíčovým slovem **git**.
 |-|-|
 |``git fetch origin pull/ID/head:pr-branch``|e.g. pr-1 for the first pr|
 
-## Repos etc.
+## Remote
 |cmd příkaz|popis|
 |-|-|
 |``git remote -v``| list remote repos|
