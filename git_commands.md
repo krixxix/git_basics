@@ -52,6 +52,7 @@ Všechny příkazy začínají klíčovým slovem **git**.
 |``git checkout <branch-name>``|(<b>obsolete</b>) switch to another branch|
 |``git switch <branch-name>``|switch to another branch|
 |``git checkout -b <branch-name>``|create and switch to a new branch (shortcut)|
+|``git remote prune <origin>``|when you delete a branch on remote ...|
 |...|...|
 
 ## Pull requests
